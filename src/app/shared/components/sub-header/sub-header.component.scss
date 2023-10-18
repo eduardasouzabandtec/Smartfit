@@ -1,0 +1,36 @@
+
+
+section {
+    margin-top: 34px;
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        h1 {
+            font-size: 34px;
+            color: var(--dark-grey);
+        }
+        .divisor {
+            width: 20%;
+            div {
+                width: 27%;
+                height: 10px;
+                background-color: var(--dark-grey);
+            }
+        }
+        
+    }
+    p {
+        color: var(--ligth-grey);
+        margin-top: 24px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .divisor {
+        div {
+            width: 100% !important;
+        }
+    }
+}   
