@@ -1,0 +1,12 @@
+<section>
+    <div class="type" *ngFor="let  description of descriptions">
+        <p> {{ description.title}}</p>
+        <div class="icon">
+            <div  *ngFor="let  icon of description.icons">
+                <img [src]="'../../../../assets/images/'+ icon.url">
+                <p> {{icon.info}}</p>
+            </div>
+
+        </div>
+    </div>
+</section>
