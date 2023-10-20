@@ -1,0 +1,39 @@
+<section>
+    <div class="description-filter">
+        <img src="../../../../assets/images/icon-hour.png" alt="">
+        <p>Horário</p>
+
+    </div>
+    <div class="title">
+        <p>Qual período quer treinar?</p>
+        <div class="divisor"></div>
+    </div>
+    <div class="period-container">
+        <div  *ngFor="let period of periodOptions; index as i">
+            <div *ngIf="i == 1 " class="divisor bottom"></div>
+            <div class="period">
+                <input type="radio" [value]="period.description" name="period">
+                <div>
+                    <p>{{ period.description }}</p>
+                    <p class="time">{{ period.time }}</p>
+                </div>
+            </div>
+            <div *ngIf="i == 1 " class="divisor bottom"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="unidades">
+            <input type="checkbox" name="all" id="">
+            <label for="all">Exibir unidades fechadas </label>
+        </div>
+        <div class="result">
+            <p>Resultados encontrados: <span>0</span></p>
+        </div>
+    </div>
+    <div class="button">
+        <button class="search">
+            Encontrar unidade
+        </button>
+        <button class="clean">Limpar</button>
+    </div>
+</section>
